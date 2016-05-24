@@ -7,3 +7,12 @@ $(document).ready(function() {
     autoplaySpeed: 8000
   })
 });
+
+$('nav > ul > li > a').click(function(e) {
+  var href = $(this).attr('href');
+  e.preventDefault();
+
+  $('html, body').animate({
+    scrollTop: $(href).offset().top
+  });
+});

@@ -2,7 +2,6 @@ html,
 body {
   margin: 0;
   padding: 0;
-  /*overflow-x: hidden;*/
 }
 
 body {
@@ -61,6 +60,10 @@ a {
   font-size: 12px;
 }
 
+.btn:hover {
+  background-color: #e95857;
+}
+
 .btn--outline {
   background-color: transparent;
   border: 2px solid #5ec2e7;
@@ -69,6 +72,12 @@ a {
   padding: 10px 20px;
   text-transform: uppercase;
   font-size: 14px;
+  transition: all 250ms ease-in-out;
+}
+
+.btn--outline:hover {
+  border-color: #56afd0;
+  color: #56afd0;
 }
 
 .grid {
@@ -358,10 +367,6 @@ textarea {
 input:focus,
 textarea:focus {
   border: 2px solid #88d3ff;
-}
-
-input[type=submit]:hover {
-  background-color: #e95857;
 }
 
 input[name=_gotcha] {
