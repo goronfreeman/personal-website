@@ -1,3 +1,16 @@
+html {
+  box-sizing: border-box;
+  font-size: 62.5%;
+}
+
+@media screen and (max-width: 725px) {
+  html { font-size: 55%; }
+}
+
+@media screen and (max-width: 320px) {
+  html { font-size: 45%; }
+}
+
 html,
 body {
   margin: 0;
@@ -6,16 +19,23 @@ body {
 
 body {
   font-family: 'Montserrat', sans-serif;
+  font-size: 1.6em;
+}
+
+*,
+*:after,
+*:before {
+  box-sizing: inherit;
 }
 
 h1 {
   color: #333;
-  font-size: 16pt;
+  font-size: 2.2rem;
   text-transform: uppercase;
 }
 
 h2 {
-  font-size: 28px;
+  font-size: 2.8rem;
   font-weight: normal;
   text-align: left;
 }
@@ -31,11 +51,11 @@ hr {
   width: 10%;
   height: 4px;
   border: none;
-  margin-bottom: 65px;
+  margin-bottom: 6.5rem;
 }
 
 a > img {
-  height: 35px;
+  height: 3.5rem;
 }
 
 li {
@@ -51,13 +71,13 @@ a {
   background-color: #ff605f;
   border: none;
   border-radius: 5px;
-  width: 135px;
-  height: 50px;
+  width: 13.5rem;
+  height: 5rem;
   color: #fff;
   cursor: pointer;
   text-transform: uppercase;
   transition: background-color 250ms ease-in-out;
-  font-size: 12px;
+  font-size: 1.2rem;
 }
 
 .btn:hover {
@@ -69,9 +89,9 @@ a {
   border: 2px solid #5ec2e7;
   border-radius: 5px;
   color: #5ec2e7;
-  padding: 10px 20px;
+  padding: 1rem 2rem;
   text-transform: uppercase;
-  font-size: 14px;
+  font-size: 1.4rem;
   transition: all 250ms ease-in-out;
 }
 
@@ -86,12 +106,12 @@ a {
 
 .grid-cell {
   flex: 1;
-  margin: 10px;
+  margin: 1rem;
 }
 
 section,
 footer {
-  padding: 100px;
+  padding: 10rem;
   text-align: center;
 }
 
@@ -100,14 +120,14 @@ footer {
 header {
   background-color: #5ec2e7;
   color: #fff;
-  height: 750px;
-  padding: 60px;
+  height: 75rem;
+  padding: 6rem;
   text-align: center;
 }
 
 nav {
   float: right;
-  font-size: 14pt;
+  font-size: 1.8rem;
   font-weight: bold;
   text-transform: uppercase;
 }
@@ -118,11 +138,11 @@ nav > ul {
 }
 
 nav > ul > li {
-  padding-left: 30px;
+  padding-left: 3rem;
 }
 
 .jumbo {
-  font-size: 60pt;
+  font-size: 8rem;
   text-transform: uppercase;
   color: #fff;
 }
@@ -142,11 +162,11 @@ nav > ul > li {
 }
 
 .about-item > img {
-  width: 200px;
+  width: 20rem;
 }
 
 h3 {
-  font-size: 24px;
+  font-size: 2.4rem;
   color: #333;
 }
 
@@ -161,7 +181,32 @@ h3 {
 
 .project {
   background-color: #5ec2e7;
-  height: 200px;
+  height: 20rem;
+  position: relative;
+  overflow: hidden;
+  cursor: pointer;
+  transition: all 350ms ease-in-out;
+}
+
+.project-info {
+  background-color: rgba(0, 0, 0, .4);
+  color: #fff;
+  position: relative;
+  bottom: 0;
+  transform: translateY(200%);
+  transition: transform 350ms ease-in-out;
+  height: 50%;
+  padding: 2rem;
+  font-family: 'Open Sans', sans-serif;
+}
+
+.project:hover {
+  transform: translateY(-10px);
+  box-shadow: 6px 6px 6px rgba(0, 0, 0, 0.2);
+}
+
+.project:hover .project-info {
+  transform: translateY(100%);
 }
 
 /* Skills */
@@ -181,7 +226,7 @@ h3 {
 @keyframes fadeIn {
   from {
     opacity: 0;
-    transform: translateX(-20px);
+    transform: translateX(-2rem);
   }
 }
 
@@ -201,14 +246,14 @@ h3 {
   position: relative;
   text-align: center;
   color: #93A2AC;
-  margin: 2rem;
+  margin: 3.25rem;
 }
 
 .progress > li:before {
   content: attr(data-name);
   position: absolute;
   width: 100%;
-  bottom: -2rem;
+  bottom: -3.25rem;
   font-weight: 400;
 }
 
@@ -216,9 +261,9 @@ h3 {
   content: attr(data-percent);
   position: absolute;
   width: 100%;
-  top: 3.7rem;
+  top: 6.0125rem;
   left: 0;
-  font-size: 2rem;
+  font-size: 3.25rem;
   text-align: center;
   animation: fadeIn 2500ms ease-in-out backwards paused;
 }
@@ -229,8 +274,8 @@ h3 {
 }
 
 .progress svg {
-  width: 10rem;
-  height: 10rem;
+  width: 16.25rem;
+  height: 16.25rem;
 }
 
 .progress svg:nth-child(2) {
@@ -256,8 +301,8 @@ h3 {
 }
 
 .experience > .grid > .grid-cell > p {
-  margin-bottom: 30px;
-  max-width: 600px;
+  margin-bottom: 3rem;
+  max-width: 60rem;
 }
 
 /* Timeline */
@@ -267,41 +312,41 @@ h3 {
 }
 
 .company {
-  font-size: 18px;
+  font-size: 1.8rem;
   color: #333;
 }
 
 .details {
-  font-size: 13px;
+  font-size: 1.3rem;
   color: #999;
 }
 
 .title {
-  font-size: 14px;
+  font-size: 1.4rem;
   color: #333;
 }
 
 .timeline-block {
   position: relative;
-  left: 60px;
-  margin-bottom: 40px;
+  left: 6rem;
+  margin-bottom: 4rem;
 }
 
 .timeline-circle {
-  height: 20px;
-  width: 20px;
+  height: 2rem;
+  width: 2rem;
   border-radius: 50%;
   background-color: #fff;
   border: 4px solid #d4d4d4;
   position: absolute;
-  left: -54px;
+  left: -5rem;
 }
 
 .timeline::before {
   content: '';
   position: absolute;
   top: 0;
-  left: 18px;
+  left: 1.8rem;
   height: 100%;
   width: 4px;
   background: #d4d4d4;
@@ -319,7 +364,7 @@ h3 {
 .quotes {
   background-color: #ff605f;
   font-style: italic;
-  font-size: 24px;
+  font-size: 2.4rem;
 }
 
 .quote,
@@ -328,22 +373,22 @@ h3 {
 }
 
 .author {
-  font-size: 16px;
+  font-size: 1.6rem;
 }
 
 /* Contact */
 
 .contact {
   background-color: #f4f4f4;
-  padding-left: 100px;
-  padding-right: 100px;
+  padding-left: 10rem;
+  padding-right: 10rem;
 }
 
 input[type=text],
 input[type=email] {
-  background-position: 20px;
+  background-position: 2rem;
   background-repeat: no-repeat;
-  text-indent: 40px;
+  text-indent: 4rem;
 }
 
 input[type=text],
@@ -352,7 +397,7 @@ textarea {
   border-radius: 5px;
   border: 2px solid #eee;
   background-color: #fff;
-  padding: 12px;
+  padding: 1.2rem;
   outline: none;
   transition: border 250ms ease-in-out;
 }
@@ -366,7 +411,7 @@ input[name=email] {
 }
 
 textarea {
-  height: 50px;
+  height: 5rem;
 }
 
 input:focus,
@@ -390,14 +435,14 @@ footer > ul {
 }
 
 footer > ul > li {
-  padding: 0 15px;
+  padding: 0 1.5rem;
 }
 
 footer > p {
-  font-size: 12px;
+  font-size: 1.2rem;
   color: #21242d;
 }
 
 .links {
-  margin-bottom: 30px;
+  margin-bottom: 3rem;
 }

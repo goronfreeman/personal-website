@@ -20,7 +20,7 @@ $('nav > ul > li > a').click(function(e) {
 $(window).scroll(function() {
   var wScroll = $(this).scrollTop();
 
-  if (wScroll >= 1715) {
+  if (wScroll >= 1715 && wScroll <= 2700) {
     $('.progress > li').addClass('play');
     $('.progress svg:nth-child(2) path').addClass('play');
   }
