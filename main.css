@@ -2,6 +2,7 @@ html,
 body {
   margin: 0;
   padding: 0;
+  /*overflow-x: hidden;*/
 }
 
 body {
@@ -45,6 +46,29 @@ li {
 a {
   color: #fff;
   text-decoration: none;
+}
+
+.btn {
+  background-color: #ff605f;
+  border: none;
+  border-radius: 5px;
+  width: 135px;
+  height: 50px;
+  color: #fff;
+  cursor: pointer;
+  text-transform: uppercase;
+  transition: background-color 250ms ease-in-out;
+  font-size: 12px;
+}
+
+.btn--outline {
+  background-color: transparent;
+  border: 2px solid #5ec2e7;
+  border-radius: 5px;
+  color: #5ec2e7;
+  padding: 10px 20px;
+  text-transform: uppercase;
+  font-size: 14px;
 }
 
 .grid {
@@ -140,8 +164,15 @@ h3 {
 /* Load animation */
 
 @keyframes load {
-  0% {
-    stroke-dashoffset: 0
+  from {
+    stroke-dashoffset: 0;
+  }
+}
+
+@keyframes fadeIn {
+  from {
+    opacity: 0;
+    transform: translateX(-20px);
   }
 }
 
@@ -180,6 +211,7 @@ h3 {
   left: 0;
   font-size: 2rem;
   text-align: center;
+  animation: fadeIn 2500ms ease-in-out backwards;
 }
 
 .progress svg {
@@ -199,8 +231,9 @@ h3 {
   stroke-width: 25;
   stroke-dasharray: 629;
   stroke: #f4f4f4;
-  animation: load 4s;
+  animation: load 2500ms ease-in-out backwards;
 }
+
 
 /* Experience */
 
@@ -211,16 +244,6 @@ h3 {
 .experience > .grid > .grid-cell > p {
   margin-bottom: 30px;
   max-width: 600px;
-}
-
-#linkedin {
-  background-color: transparent;
-  border: 2px solid #88d3ff;
-  border-radius: 5px;
-  color: #88d3ff;
-  padding: 10px 20px;
-  text-transform: uppercase;
-  font-size: 14px;
 }
 
 /* Timeline */
@@ -337,21 +360,12 @@ textarea:focus {
   border: 2px solid #88d3ff;
 }
 
-input[type=submit] {
-  background-color: #ff605f;
-  border: none;
-  border-radius: 5px;
-  width: 135px;
-  height: 50px;
-  color: #fff;
-  cursor: pointer;
-  text-transform: uppercase;
-  transition: background-color 250ms ease-in-out;
-  font-size: 12px;
-}
-
 input[type=submit]:hover {
   background-color: #e95857;
+}
+
+input[name=_gotcha] {
+  display: none;
 }
 
 /* Footer */

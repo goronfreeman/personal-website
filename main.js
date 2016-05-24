@@ -4,6 +4,6 @@ $(document).ready(function() {
     slidesToScroll: 1,
     autoplay: true,
     infinte: true,
-    autoplaySpeed: 10000
+    autoplaySpeed: 8000
   })
 });
