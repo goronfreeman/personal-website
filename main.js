@@ -1,5 +1,5 @@
 $(document).ready(function() {
-  $('.quotes').slick({
+  $('.quotes, .about').slick({
     slidesToShow: 1,
     slidesToScroll: 1,
     autoplay: true,

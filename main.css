@@ -8,10 +8,64 @@ body {
   font-family: 'Montserrat', sans-serif;
 }
 
+h1 {
+  color: #333;
+  font-size: 16pt;
+  text-transform: uppercase;
+}
+
+h2 {
+  font-size: 28px;
+  font-weight: normal;
+  text-align: left;
+}
+
+p {
+  color: #666;
+  font-family: 'Open Sans', sans-serif;
+}
+
+hr {
+  background: #e3e3e3;
+  color: #e3e3e3;
+  width: 10%;
+  height: 4px;
+  border: none;
+  margin-bottom: 65px;
+}
+
+a > img {
+  height: 35px;
+}
+
+li {
+  display: inline;
+}
+
+a {
+  color: #fff;
+  text-decoration: none;
+}
+
+.grid {
+  display: flex !important;
+}
+
+.grid-cell {
+  flex: 1;
+  margin: 10px;
+}
+
+section,
+footer {
+  padding: 100px;
+  text-align: center;
+}
+
+/* Header */
+
 header {
   background-color: #5ec2e7;
-  /*background-image: url('img/header-bg.jpeg');*/
-  background-size: cover;
   color: #fff;
   height: 750px;
   padding: 60px;
@@ -34,24 +88,7 @@ nav > ul > li {
   padding-left: 30px;
 }
 
-li {
-  display: inline;
-}
-
-footer > ul {
-  padding: 0;
-}
-
-footer > ul > li {
-  padding: 0 15px;
-}
-
-a {
-  color: #fff;
-  text-decoration: none;
-}
-
-header h1 {
+.jumbo {
   font-size: 60pt;
   text-transform: uppercase;
   color: #fff;
@@ -65,144 +102,115 @@ header h1 {
   justify-content: center;
 }
 
-section,
-footer {
-  padding: 100px;
-  text-align: center;
-}
+/* About */
 
 .about {
   background-color: #f4f4f4;
-  height: 400px;
 }
 
-.portfolio {
-  height: 900px;
+.about-item > img {
+  width: 200px;
 }
+
+h3 {
+  font-size: 24px;
+  color: #333;
+}
+
+.info-container {
+  text-align: left;
+}
+
+/* Portfolio */
+
+.portfolio {
+}
+
+.project {
+  background-color: #5ec2e7;
+  height: 200px;
+}
+
+/* Skills */
 
 .skills {
   background-color: #f4f4f4;
-  height: 750px;
 }
+
+/* Load animation */
+
+@keyframes load {
+  0% {
+    stroke-dashoffset: 0
+  }
+}
+
+/* Container */
+
+.progress {
+  position: relative;
+  display: inline-block;
+  padding: 0;
+  text-align: center;
+}
+
+/* Item */
+
+.progress > li {
+  display: inline-block;
+  position: relative;
+  text-align: center;
+  color: #93A2AC;
+  margin: 2rem;
+}
+
+.progress > li:before {
+  content: attr(data-name);
+  position: absolute;
+  width: 100%;
+  bottom: -2rem;
+  font-weight: 400;
+}
+
+.progress > li:after {
+  content: attr(data-percent);
+  position: absolute;
+  width: 100%;
+  top: 3.7rem;
+  left: 0;
+  font-size: 2rem;
+  text-align: center;
+}
+
+.progress svg {
+  width: 10rem;
+  height: 10rem;
+}
+
+.progress svg:nth-child(2) {
+  position: absolute;
+  left: 0;
+  top: 0;
+  transform: rotate(-90deg);
+}
+
+.progress svg:nth-child(2) path {
+  fill: none;
+  stroke-width: 25;
+  stroke-dasharray: 629;
+  stroke: #f4f4f4;
+  animation: load 4s;
+}
+
+/* Experience */
 
 .experience {
   text-align: left;
 }
 
 .experience > .grid > .grid-cell > p {
-  color: #666666;
   margin-bottom: 30px;
-  font-family: 'Open Sans', sans-serif;
   max-width: 600px;
-}
-
-.quotes {
-  background-color: #ff605f;
-  font-family: 'Open Sans', sans-serif;
-  font-style: italic;
-  color: #fff;
-  font-size: 24px;
-}
-
-.contact {
-  background-color: #f4f4f4;
-  padding-left: 100px;
-  padding-right: 100px;
-}
-
-h1 {
-  color: #333;
-  font-size: 16pt;
-  text-transform: uppercase;
-}
-
-hr {
-  background: #e3e3e3;
-  color: #e3e3e3;
-  width: 10%;
-  height: 4px;
-  border: none;
-  margin-bottom: 65px;
-}
-
-footer {
-  background-color: #363842;
-  color: #21242d;
-  font-size: 16px;
-}
-
-img {
-  height: 35px;
-}
-
-/* Form */
-input[type=text],
-input[type=email] {
-  background-position: 20px;
-  background-repeat: no-repeat;
-  text-indent: 40px;
-}
-
-input[type=text],
-input[type=email],
-textarea {
-  border-radius: 5px;
-  border: 2px solid #eee;
-  background-color: #fff;
-  padding: 12px;
-  outline: none;
-  transition: border 250ms;
-}
-
-input[name=name] {
-  background-image: url(img/name.svg);
-}
-
-input[name=email] {
-  background-image: url(img/email.svg);
-}
-
-textarea {
-  height: 50px;
-}
-
-input:focus,
-textarea:focus {
-  border: 2px solid #88d3ff;
-}
-
-input[type=submit] {
-  background-color: #ff605f;
-  border: none;
-  border-radius: 5px;
-  width: 135px;
-  height: 50px;
-  color: #fff;
-  cursor: pointer;
-  text-transform: uppercase;
-  transition: background-color 250ms;
-  font-size: 12px;
-}
-
-input[type=submit]:hover {
-  background-color: #e95857;
-}
-
-.grid {
-  display: flex;
-}
-
-.grid-cell {
-  flex: 1;
-  margin: 10px;
-}
-
-.links {
-  margin-bottom: 30px;
-}
-
-footer > p {
-  font-size: 12px;
 }
 
 #linkedin {
@@ -215,13 +223,8 @@ footer > p {
   font-size: 14px;
 }
 
-h2 {
-  font-size: 28px;
-  font-weight: normal;
-  text-align: left;
-}
+/* Timeline */
 
-/*Timeline*/
 .timeline {
   position: relative;
 }
@@ -274,6 +277,102 @@ h2 {
   left: 2px;
 }
 
+/* Quotes */
+
+.quotes {
+  background-color: #ff605f;
+  font-style: italic;
+  font-size: 24px;
+}
+
+.quote,
+.author {
+  color: #fff;
+}
+
 .author {
   font-size: 16px;
+}
+
+/* Contact */
+
+.contact {
+  background-color: #f4f4f4;
+  padding-left: 100px;
+  padding-right: 100px;
+}
+
+input[type=text],
+input[type=email] {
+  background-position: 20px;
+  background-repeat: no-repeat;
+  text-indent: 40px;
+}
+
+input[type=text],
+input[type=email],
+textarea {
+  border-radius: 5px;
+  border: 2px solid #eee;
+  background-color: #fff;
+  padding: 12px;
+  outline: none;
+  transition: border 250ms ease-in-out;
+}
+
+input[name=name] {
+  background-image: url(img/name.svg);
+}
+
+input[name=email] {
+  background-image: url(img/email.svg);
+}
+
+textarea {
+  height: 50px;
+}
+
+input:focus,
+textarea:focus {
+  border: 2px solid #88d3ff;
+}
+
+input[type=submit] {
+  background-color: #ff605f;
+  border: none;
+  border-radius: 5px;
+  width: 135px;
+  height: 50px;
+  color: #fff;
+  cursor: pointer;
+  text-transform: uppercase;
+  transition: background-color 250ms ease-in-out;
+  font-size: 12px;
+}
+
+input[type=submit]:hover {
+  background-color: #e95857;
+}
+
+/* Footer */
+
+footer {
+  background-color: #363842;
+  color: #21242d;
+}
+
+footer > ul {
+  padding: 0;
+}
+
+footer > ul > li {
+  padding: 0 15px;
+}
+
+footer > p {
+  font-size: 12px;
+}
+
+.links {
+  margin-bottom: 30px;
 }
