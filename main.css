@@ -220,7 +220,12 @@ h3 {
   left: 0;
   font-size: 2rem;
   text-align: center;
-  animation: fadeIn 2500ms ease-in-out backwards;
+  animation: fadeIn 2500ms ease-in-out backwards paused;
+}
+
+.progress > li.play:after,
+.progress svg:nth-child(2) path.play {
+  animation-play-state: running;
 }
 
 .progress svg {
@@ -240,7 +245,7 @@ h3 {
   stroke-width: 25;
   stroke-dasharray: 629;
   stroke: #f4f4f4;
-  animation: load 2500ms ease-in-out backwards;
+  animation: load 2500ms ease-in-out backwards paused;
 }
 
 

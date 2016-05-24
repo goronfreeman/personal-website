@@ -16,3 +16,12 @@ $('nav > ul > li > a').click(function(e) {
     scrollTop: $(href).offset().top
   });
 });
+
+$(window).scroll(function() {
+  var wScroll = $(this).scrollTop();
+
+  if (wScroll >= 1715) {
+    $('.progress > li').addClass('play');
+    $('.progress svg:nth-child(2) path').addClass('play');
+  }
+});
