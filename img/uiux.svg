@@ -7,12 +7,12 @@
 	<path fill="#FF605F" d="M200,140c0,33.137-26.863,60-60,60H60c-33.137,0-60-26.863-60-60V60C0,26.863,26.863,0,60,0h80
 		c33.137,0,60,26.863,60,60V140z"/>
 </g>
-<text transform="matrix(1 0 0 1 77.7021 111.832)" fill="#FFFFFF" font-family="'Montserrat-Bold'" font-size="42">UI</text>
+<g opacity="0.5">
+	<path fill="#E2E3E3" d="M347,140c0,33.137-26.863,60-60,60h-80c-33.137,0-60-26.863-60-60V60c0-33.137,26.863-60,60-60h80
+		c33.137,0,60,26.863,60,60V140z"/>
+</g>
+<text transform="matrix(1 0 0 1 78.7021 111.832)" fill="#FFFFFF" font-family="'Montserrat-Bold'" font-size="42">UI</text>
 <g>
-	<g opacity="0.5">
-		<path fill="#E6E7E7" d="M347,140c0,33.137-26.863,60-60,60h-80c-33.137,0-60-26.863-60-60V60c0-33.137,26.863-60,60-60h80
-			c33.137,0,60,26.863,60,60V140z"/>
-	</g>
-	<text transform="matrix(1 0 0 1 224.7031 111.8896)" fill="#FF605F" font-family="'Montserrat-Bold'" font-size="42">UX</text>
+	<text transform="matrix(1 0 0 1 220.7031 111.8896)" fill="#FF605F" font-family="'Montserrat-Bold'" font-size="42">UX</text>
 </g>
 </svg>
