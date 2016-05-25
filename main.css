@@ -98,9 +98,7 @@ footer {
 header {
   background-color: #5ec2e7;
   background-image: url(img/bg-image.jpg);
-  /*background-position: center;*/
   background-size: cover;
-  background-repeat: no-repeat;
   color: #fff;
   height: 74rem;
   padding: 6rem;
@@ -135,7 +133,7 @@ nav > ul > li:hover a {
   font-size: 8rem;
   text-transform: uppercase;
   color: #fff;
-  margin: 4.5rem;
+  margin: 4.3rem;
 }
 
 .subtitle {
