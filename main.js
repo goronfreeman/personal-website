@@ -4,6 +4,8 @@ $(document).ready(function() {
     slidesToScroll: 1,
     autoplay: true,
     infinte: true,
+    arrows: false,
+    dots: true,
     autoplaySpeed: 8000
   })
 });
@@ -13,7 +15,7 @@ $('nav > ul > li > a').click(function(e) {
   e.preventDefault();
 
   $('html, body').animate({
-    scrollTop: $(href).offset().top
+    scrollTop: $(href).offset().top + 1
   });
 });
 

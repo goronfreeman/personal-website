@@ -1,7 +1,6 @@
 html {
   box-sizing: border-box;
   font-size: 62.5%;
-  overflow-x: hidden;
 }
 
 html,
@@ -475,4 +474,24 @@ footer > p {
 
 .links {
   margin-bottom: 3rem;
+}
+
+.slick-dots {
+  padding-left: 0;
+  position: relative;
+  top: 8rem;
+}
+
+.slick-dots > li > button{
+  background: rgba(0, 0, 0, .1);
+  border: none;
+  border-radius: 50%;
+  margin: 0 .8rem;
+  color: transparent;
+  cursor: pointer;
+  outline: none;
+}
+
+li.slick-active > button{
+  background: rgba(0, 0, 0, .3);
 }
