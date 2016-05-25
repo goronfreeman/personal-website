@@ -135,6 +135,7 @@ nav > ul > li:hover a {
   font-size: 8rem;
   text-transform: uppercase;
   color: #fff;
+  margin: 4.5rem;
 }
 
 .subtitle {
@@ -476,14 +477,15 @@ footer > p {
   margin-bottom: 3rem;
 }
 
+/* Carousel */
+
 .slick-dots {
   padding-left: 0;
   position: relative;
   top: 8rem;
 }
 
-.slick-dots > li > button{
-  background: rgba(0, 0, 0, .1);
+.slick-dots > li > button {
   border: none;
   border-radius: 50%;
   margin: 0 .8rem;
@@ -492,6 +494,18 @@ footer > p {
   outline: none;
 }
 
-li.slick-active > button{
+.about > .slick-dots > li > button {
+  background: rgba(0, 0, 0, .1);
+}
+
+.about > ul > li.slick-active > button {
   background: rgba(0, 0, 0, .3);
+}
+
+.quotes > .slick-dots > li > button {
+  background: rgba(255, 255, 255, .2);
+}
+
+.quotes > ul > li.slick-active > button {
+  background: #fff;
 }
