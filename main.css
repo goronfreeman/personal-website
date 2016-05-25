@@ -1,14 +1,7 @@
 html {
   box-sizing: border-box;
   font-size: 62.5%;
-}
-
-@media screen and (max-width: 725px) {
-  html { font-size: 55%; }
-}
-
-@media screen and (max-width: 320px) {
-  html { font-size: 45%; }
+  overflow-x: hidden;
 }
 
 html,
@@ -68,34 +61,18 @@ a {
 }
 
 .btn {
-  background-color: #ff605f;
-  border: none;
-  border-radius: 5px;
-  width: 13.5rem;
-  height: 5rem;
-  color: #fff;
-  cursor: pointer;
-  text-transform: uppercase;
-  transition: background-color 250ms ease-in-out;
-  font-size: 1.2rem;
-}
-
-.btn:hover {
-  background-color: #e95857;
-}
-
-.btn--outline {
   background-color: transparent;
   border: 2px solid #5ec2e7;
   border-radius: 5px;
   color: #5ec2e7;
+  margin: 1rem 0;
   padding: 1rem 2rem;
   text-transform: uppercase;
   font-size: 1.4rem;
   transition: all 250ms ease-in-out;
 }
 
-.btn--outline:hover {
+.btn:hover {
   border-color: #56afd0;
   color: #56afd0;
 }
@@ -119,6 +96,10 @@ footer {
 
 header {
   background-color: #5ec2e7;
+  background-image: url(img/bg-image.jpg);
+  /*background-position: center;*/
+  background-size: cover;
+  background-repeat: no-repeat;
   color: #fff;
   height: 75rem;
   padding: 6rem;
@@ -128,8 +109,7 @@ header {
 nav {
   float: right;
   font-size: 1.8rem;
-  font-weight: bold;
-  text-transform: uppercase;
+  position: relative;
 }
 
 nav > ul {
@@ -141,10 +121,23 @@ nav > ul > li {
   padding-left: 3rem;
 }
 
+nav > ul > li > a {
+  transition: all 200ms ease-in-out;
+}
+
+nav > ul > li:hover a {
+  border-bottom: 2px solid #000;
+  color: #000;
+}
+
 .jumbo {
   font-size: 8rem;
   text-transform: uppercase;
   color: #fff;
+}
+
+.subtitle {
+  font-size: 2.2rem;
 }
 
 .wrapper {
@@ -153,6 +146,10 @@ nav > ul > li {
   display: flex;
   align-items: center;
   justify-content: center;
+}
+
+.content {
+  display: block;
 }
 
 /* About */
@@ -166,7 +163,7 @@ nav > ul > li {
 }
 
 h3 {
-  font-size: 2.4rem;
+  font-size: 2.2rem;
   color: #333;
 }
 
@@ -176,9 +173,6 @@ h3 {
 
 /* Portfolio */
 
-.portfolio {
-}
-
 .project {
   background-color: #5ec2e7;
   height: 20rem;
@@ -186,6 +180,26 @@ h3 {
   overflow: hidden;
   cursor: pointer;
   transition: all 350ms ease-in-out;
+  animation: scaleUp 750ms ease-in-out paused backwards;
+  transform-origin: bottom left;
+}
+
+@keyframes scaleUp {
+  0% { transform: scale(0); }
+  80% { transform: scale(1.05); }
+  100% { transition: scale(1); }
+}
+
+#project2 {
+  animation-delay: 100ms;
+}
+
+#project3 {
+  animation-delay: 200ms;
+}
+
+#project4 {
+  animation-delay: 300ms;
 }
 
 .project-info {
@@ -207,6 +221,10 @@ h3 {
 
 .project:hover .project-info {
   transform: translateY(100%);
+}
+
+.btn-wrapper {
+  margin: 2rem;
 }
 
 /* Skills */
@@ -265,11 +283,13 @@ h3 {
   left: 0;
   font-size: 3.25rem;
   text-align: center;
-  animation: fadeIn 2500ms ease-in-out backwards paused;
+  animation: fadeIn 1500ms ease-in-out backwards paused;
 }
 
 .progress > li.play:after,
-.progress svg:nth-child(2) path.play {
+.progress svg:nth-child(2) path.play,
+.project.play,
+.experience.play {
   animation-play-state: running;
 }
 
@@ -290,7 +310,7 @@ h3 {
   stroke-width: 25;
   stroke-dasharray: 629;
   stroke: #f4f4f4;
-  animation: load 2500ms ease-in-out backwards paused;
+  animation: load 1500ms ease-in-out backwards paused;
 }
 
 
@@ -298,11 +318,19 @@ h3 {
 
 .experience {
   text-align: left;
+  animation: fadeUp 1250ms ease-in-out paused;
 }
 
 .experience > .grid > .grid-cell > p {
   margin-bottom: 3rem;
   max-width: 60rem;
+}
+
+@keyframes fadeUp {
+  from {
+    opacity: 0;
+    transform: translateY(2rem);
+  }
 }
 
 /* Timeline */
@@ -411,7 +439,7 @@ input[name=email] {
 }
 
 textarea {
-  height: 5rem;
+  height: 8rem;
 }
 
 input:focus,

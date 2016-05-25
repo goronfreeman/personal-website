@@ -20,8 +20,18 @@ $('nav > ul > li > a').click(function(e) {
 $(window).scroll(function() {
   var wScroll = $(this).scrollTop();
 
-  if (wScroll >= 1715 && wScroll <= 2700) {
+  if (wScroll >= 815) {
+    $('.project').addClass('play');
+  }
+
+  if (wScroll >= 1540) {
     $('.progress > li').addClass('play');
     $('.progress svg:nth-child(2) path').addClass('play');
   }
+
+  if (wScroll >= 1850) {
+    $('.experience').addClass('play');
+  }
+
+  console.log(wScroll);
 });
