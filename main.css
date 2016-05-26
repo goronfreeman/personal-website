@@ -40,7 +40,7 @@ p {
 hr {
   background: #e3e3e3;
   color: #e3e3e3;
-  width: 10%;
+  width: 10rem;
   height: 4px;
   border: none;
   margin-bottom: 6.5rem;
@@ -55,7 +55,7 @@ li {
 }
 
 a {
-  color: #fff;
+  color: inherit;
   text-decoration: none;
 }
 
@@ -64,6 +64,7 @@ a {
   border: 2px solid #5ec2e7;
   border-radius: 5px;
   color: #5ec2e7;
+  display: inline;
   margin: 1rem 0;
   padding: 1rem 2rem;
   text-transform: uppercase;
@@ -80,6 +81,8 @@ a {
 
 .grid {
   display: flex !important;
+  flex-wrap: wrap;
+  justify-content: center;
 }
 
 .grid-cell {
@@ -125,7 +128,6 @@ nav > ul > li > a {
 }
 
 nav > ul > li:hover a {
-  border-bottom: 2px solid #000;
   color: #000;
 }
 
@@ -175,7 +177,11 @@ h3 {
 
 .project {
   background-color: #5ec2e7;
+  background-repeat: no-repeat;
+  background-size: cover;
   height: 20rem;
+  min-width: 30rem;
+  max-width: 30rem;
   position: relative;
   overflow: hidden;
   cursor: pointer;
@@ -259,7 +265,7 @@ h3 {
 
 /* Item */
 
-.progress > li {
+.progress > div {
   display: inline-block;
   position: relative;
   text-align: center;
@@ -267,7 +273,7 @@ h3 {
   margin: 3.25rem;
 }
 
-.progress > li:before {
+.progress > div:before {
   content: attr(data-name);
   position: absolute;
   width: 100%;
@@ -275,7 +281,7 @@ h3 {
   font-weight: 400;
 }
 
-.progress > li:after {
+.progress > div:after {
   content: attr(data-percent);
   position: absolute;
   width: 100%;
@@ -286,7 +292,7 @@ h3 {
   animation: fadeIn 1500ms ease-in-out backwards paused;
 }
 
-.progress > li.play:after,
+.progress > div.play:after,
 .progress svg:nth-child(2) path.play,
 .project.play,
 .experience.play {
@@ -431,11 +437,11 @@ textarea {
 }
 
 input[name=name] {
-  background-image: url(img/name.svg);
+  background-image: url(img/contact/name.svg);
 }
 
 input[name=email] {
-  background-image: url(img/email.svg);
+  background-image: url(img/contact/email.svg);
 }
 
 textarea {
@@ -458,14 +464,6 @@ footer {
   color: #21242d;
 }
 
-footer > ul {
-  padding: 0;
-}
-
-footer > ul > li {
-  padding: 0 1.5rem;
-}
-
 footer > p {
   font-size: 1.2rem;
   color: #21242d;
@@ -473,6 +471,10 @@ footer > p {
 
 .links {
   margin-bottom: 3rem;
+}
+
+.links > a {
+  margin: 1.5rem;
 }
 
 /* Carousel */
@@ -484,6 +486,7 @@ footer > p {
 }
 
 .slick-dots > li > button {
+  background: rgba(0, 0, 0, .1);
   border: none;
   border-radius: 50%;
   margin: 0 .8rem;
@@ -492,18 +495,10 @@ footer > p {
   outline: none;
 }
 
-.about > .slick-dots > li > button {
-  background: rgba(0, 0, 0, .1);
-}
-
-.about > ul > li.slick-active > button {
+li.slick-active > button {
   background: rgba(0, 0, 0, .3);
 }
 
-.quotes > .slick-dots > li > button {
-  background: rgba(255, 255, 255, .2);
-}
-
-.quotes > ul > li.slick-active > button {
-  background: #fff;
+.slick-slide {
+  outline: none;
 }

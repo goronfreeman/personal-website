@@ -7,6 +7,7 @@ $(document).ready(function() {
     infinte: true,
     arrows: false,
     dots: true,
+    draggable: false,
     autoplaySpeed: 8000
   })
 });
@@ -28,7 +29,7 @@ $(window).scroll(function() {
   }
 
   if (wScroll >= 1540) {
-    $('.progress > li').addClass('play');
+    $('.progress > div').addClass('play');
     $('.progress svg:nth-child(2) path').addClass('play');
   }
 
