@@ -12,6 +12,7 @@ body {
 body {
   font-family: 'Montserrat', sans-serif;
   font-size: 1.6em;
+  /*line-height: 3rem;*/
 }
 
 *,
@@ -65,7 +66,6 @@ a {
   border-radius: 5px;
   color: #5ec2e7;
   display: inline;
-  margin: 1rem 0;
   padding: 1rem 2rem;
   text-transform: uppercase;
   font-size: 1.4rem;
@@ -119,16 +119,22 @@ nav > ul {
   display: inline;
 }
 
-nav > ul > li {
+nav li {
   padding-left: 3rem;
 }
 
-nav > ul > li > a {
+nav a {
   transition: all 200ms ease-in-out;
 }
 
-nav > ul > li:hover a {
+nav li:hover a {
   color: #000;
+}
+
+@media (max-width: 550px) {
+  nav {
+    visibility: hidden;
+  }
 }
 
 .jumbo {
@@ -164,6 +170,10 @@ nav > ul > li:hover a {
   width: 20rem;
 }
 
+.about-item > .grid-cell {
+  min-width: 32.5rem;
+}
+
 h3 {
   font-size: 2.2rem;
   color: #333;
@@ -171,6 +181,16 @@ h3 {
 
 .info-container {
   text-align: left;
+}
+
+.info-container .btn {
+  margin-right: 1rem;
+}
+
+@media (max-width: 889px) {
+  .info-container {
+    text-align: center;
+  }
 }
 
 /* Portfolio */
@@ -230,7 +250,7 @@ h3 {
 }
 
 .btn-wrapper {
-  margin: 2rem;
+  margin: 3rem 0;
 }
 
 /* Skills */
@@ -242,9 +262,7 @@ h3 {
 /* Load animation */
 
 @keyframes load {
-  from {
-    stroke-dashoffset: 0;
-  }
+  from { stroke-dashoffset: 0; }
 }
 
 @keyframes fadeIn {
@@ -341,29 +359,43 @@ h3 {
 
 /* Timeline */
 
+.specialties,
+.timeline {
+  min-width: 32.5rem;
+}
+
 .timeline {
   position: relative;
+  margin-top: 2.8rem;
 }
 
-.company {
-  font-size: 1.8rem;
-  color: #333;
-}
-
-.details {
-  font-size: 1.3rem;
-  color: #999;
-}
-
-.title {
-  font-size: 1.4rem;
-  color: #333;
+.timeline-content {
+  margin: .5rem auto;
 }
 
 .timeline-block {
   position: relative;
   left: 6rem;
-  margin-bottom: 4rem;
+  margin-top: 2rem;
+  margin-bottom: 2rem;
+}
+
+.company {
+  font-size: 1.8rem;
+  color: #333;
+  margin: inherit;
+}
+
+.title {
+  font-size: 1.4rem;
+  color: #333;
+  margin: inherit;
+}
+
+.details {
+  font-size: 1.3rem;
+  color: #999;
+  margin: inherit;
 }
 
 .timeline-circle {
@@ -485,7 +517,7 @@ footer > p {
   top: 8rem;
 }
 
-.slick-dots > li > button {
+.slick-dots button {
   background: rgba(0, 0, 0, .1);
   border: none;
   border-radius: 50%;
@@ -495,7 +527,7 @@ footer > p {
   outline: none;
 }
 
-li.slick-active > button {
+.slick-active button {
   background: rgba(0, 0, 0, .3);
 }
 

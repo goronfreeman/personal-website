@@ -12,7 +12,7 @@ $(document).ready(function() {
   })
 });
 
-$('nav > ul > li > a').click(function(e) {
+$('nav a').click(function(e) {
   var href = $(this).attr('href');
   e.preventDefault();
 
@@ -36,6 +36,4 @@ $(window).scroll(function() {
   if (wScroll >= 1850) {
     $('.experience').addClass('play');
   }
-
-  console.log(wScroll);
 });
