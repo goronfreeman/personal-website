@@ -96,6 +96,13 @@ footer {
   text-align: center;
 }
 
+@media (max-width: 500px) {
+  section,
+  footer {
+    padding: 5rem;
+  }
+}
+
 /* Header */
 
 header {
@@ -172,6 +179,12 @@ nav li:hover a {
 
 .about-item > .grid-cell {
   min-width: 32.5rem;
+}
+
+@media (max-width: 530px) {
+  .about-item > .grid-cell {
+    min-width: 20rem;
+  }
 }
 
 h3 {
@@ -463,6 +476,7 @@ textarea {
   border-radius: 5px;
   border: 2px solid #eee;
   background-color: #fff;
+  font-family: inherit;
   padding: 1.2rem;
   outline: none;
   transition: border 250ms ease-in-out;
@@ -513,8 +527,12 @@ footer > p {
 
 .slick-dots {
   padding-left: 0;
-  position: relative;
-  top: 8rem;
+  /*position: relative;
+  top: 8rem;*/
+  position: absolute;
+  left: 50%;
+  bottom: 1rem;
+  transform: translateX(-50%);
 }
 
 .slick-dots button {
@@ -525,6 +543,8 @@ footer > p {
   color: transparent;
   cursor: pointer;
   outline: none;
+  width: 1.7rem;
+  height: 1.7rem;
 }
 
 .slick-active button {
